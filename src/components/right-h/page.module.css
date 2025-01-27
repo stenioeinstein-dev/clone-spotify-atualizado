@@ -1,0 +1,154 @@
+.container {
+    width: 100%;
+    height: calc(100% - 38px);
+    background-color: #121212;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: .4rem;
+}
+
+.playlist {
+    padding: 10px 18px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.playlist > h1 {
+    color: #f7f7f7;
+    font-size: 18px;
+}
+
+
+.playlist > h2 {
+    color: #f7f7f7a6;
+    font-size: 14px;
+}
+
+.content_itens {
+    padding: 10px;
+    height: calc(100%);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA
+    display: grid;
+    gap: 16px;
+    grid-gap: 32px;
+    margin: 0 auto; */
+
+}
+
+.cards {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 250px;
+}
+
+.cover_image {
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
+    /* border-radius: 6px; */
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.cards:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5)68%, rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5)68%, rgba(12, 13, 19) 97%);
+}
+
+.cards:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.cards:hover .wrapper::after {
+    height: 120px;
+}
+
+.title {
+    font-size: 1rem;
+    width: 100%;
+    background: #0a0a0a00;
+    color: #d7d6d6;
+    padding-bottom: 8px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.cards:hover .title {
+    transform: translate3d(0%, -32px, 80px);
+    color: #fff;
+    background: transparent;
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 1;
+}
+
+.cards:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -14%, -150px);
+}
+
+
+
+/* @media screen and (max-width: 1115px) {
+
+}
+
+@media screen and (max-width: 1085px) {
+
+}
+
+@media screen and (max-width: 840px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+} */
