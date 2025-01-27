@@ -1,0 +1,9 @@
+.container {
+    max-width: 420px;
+    width: 280px;
+    min-width: 280px;
+    /* height: 100%; */
+    height: calc(100% - 38px);
+    background-color: #121212;
+    border-radius: .4rem;
+}
