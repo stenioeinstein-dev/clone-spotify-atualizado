@@ -1,0 +1,77 @@
+.disclaimer-premium {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 12px 24px 8px 15px;
+    margin: 0 8px 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disclaimer-premium .text {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.disclaimer-premium .disclaimer-premium__title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.83rem;
+    margin: 0;
+}
+
+.disclaimer-premium .disclaimer-premium__subtitle {
+    color: #ffffff;
+    font-size: 0.93rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.disclaimer-premium button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#artistList {
+    display: none;
+}
+
+@media screen and (max-width: 840px) {
+    .disclaimer-premium {
+        padding: 8px;
+        margin: 8px;
+        display: none;
+    }
+    .disclaimer-premium .disclaimer-premium__title {
+        font-size: 10px;
+    }
+    .disclaimer-premium .disclaimer-premium__subtitle {
+        font-size: 12px;
+    }
+    .button > .button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 10px;
+        font-weight: bold;
+        border-radius: 40px;
+
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .disclaimer-premium {
+        display: none;
+    }
+}
