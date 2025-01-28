@@ -15,9 +15,45 @@
     filter: grayscale(1) contrast(10);
 }
 
-.content_c {
-
+.content_mobile {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
+
+.modal_mobile {
+    background: #000000df;
+    backdrop-filter: blur(6px);
+}
+
+.modal_mobile_nav {
+    padding: 60px 48px 56px 36px;
+    margin-left: 20px;
+}
+
+.modal_mobile_nav_nm {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hr {
+    width: 20px;
+}
+
+.modal_mobile_nav_sub {
+    font-size: 16px !important;
+    color: white;
+}
+
+.modal_mobile_nav_nm:hover,
+.modal_mobile_nav_sub:hover {
+    margin-left: -10px;
+}
+
+/* .content_c {} */
 
 .content_r {
     width: auto;
@@ -27,15 +63,11 @@
     gap: 18px;
 }
 
-
-
 .content_c {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
-
 
 .content_c>form {
     width: 364px;
@@ -70,7 +102,7 @@
     cursor: pointer;
 }
 
-.icon_home > svg > path {
+.icon_home>svg>path {
     fill: #fff;
 }
 
@@ -86,6 +118,7 @@
     justify-content: center;
     cursor: default;
 }
+
 .bar:hover {
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -98,17 +131,46 @@
     height: 21px;
     cursor: pointer;
 }
-.icon_search > svg,
-.icon_browser > svg {
+
+.icon_search>svg,
+.icon_browser>svg {
     position: absolute;
     width: 21px;
     height: 21px;
     fill: #adadad;
 }
-.icon_search > svg:hover,
-.icon_browser > svg:hover {
+
+.icon_search>svg:hover,
+.icon_browser>svg:hover {
     position: absolute;
     width: 21px;
     height: 21px;
     fill: #ffffff;
+}
+
+@media screen and (max-width: 1115px) {
+    .content_itens {
+        padding: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 1085px) {}
+
+@media screen and (max-width: 840px) {
+    .container {
+        padding: 8px 12px 0px 12px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        padding: 8px 12px 0px 12px;
+    }
 }
