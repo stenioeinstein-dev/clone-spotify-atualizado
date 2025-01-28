@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -56,7 +57,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={styles.content_nm}>
-                    <span>© 2025 Clone Spotify AB</span>
+                    <span>© 2025 Clone Spotify - Imersão Frontend</span>
                 </div>
             </div>
         </>

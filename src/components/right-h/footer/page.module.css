@@ -28,12 +28,16 @@
 
 .section > label {
     font-weight: 800;
+    color: white;
 }
 
 .section > a {
+    font-size: 14px;
     color: #878787;
 }
-
+.section > a:hover {
+    color: white;
+}
 
 
 
@@ -62,6 +66,8 @@
 
 
 .content_nm {
+    display: flex;
+    flex-direction: column;
     margin-top: 36px;
     border-top: 1px solid #5a5a5a;
     padding: 40px 0 60px 0;
@@ -70,6 +76,17 @@
 .content_nm > span {
     font-size: 0.875rem;
     color: #878787;
+}
+
+@media screen and (max-width: 1150px) {
+    .section_itens {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
 }
 
 
