@@ -25,22 +25,10 @@
     font-size: 14px;
 }
 
-.content_itens {
-    padding: 10px;
-    height: auto;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 16px;
-    gap: 16px;
-    margin-bottom: 16px;
-
-    /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA
-    display: grid;
-    gap: 16px;
-    grid-gap: 32px;
-    margin: 0 auto; */
-
+.content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cards {
@@ -149,41 +137,9 @@
     }
 }
 
-@media screen and (max-width: 1085px) {
-    .content_itens {
-        padding: 10px;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 16px;
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-}
 
 @media screen and (max-width: 840px) {
     .container {
         height: 108%;
-    }
-    .content_itens {
-        padding: 10px;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 16px;
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-}
-
-@media screen and (max-width: 620px) {
-    .content_itens {
-        padding: 10px;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-        gap: 16px;
-        margin-bottom: 16px;
     }
 }
