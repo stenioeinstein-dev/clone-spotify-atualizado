@@ -26,6 +26,9 @@ export default function Header() {
                             </svg>
                         </div>
                         <input type="text" placeholder="What do you want to listen to?" id="search" />
+                        <div className={styles.bar} title="Click /">
+                        /
+                        </div>
                         <div className={styles.icon_browser} title="Browser">
                             <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
                                 <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" ></path>
