@@ -7,6 +7,10 @@
     border-radius: .4rem;
 }
 
+.content {
+    margin-top: 20px;
+}
+
 
 @media screen and (max-width: 1115px) {
     .content_itens {
