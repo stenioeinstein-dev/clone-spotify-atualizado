@@ -32,7 +32,7 @@
 }
 
 .installapp:hover,
-.installapp svg:hover,
+.installapp:hover > svg,
 .subscribe:hover {
     color: #fff;
     fill: white !important;

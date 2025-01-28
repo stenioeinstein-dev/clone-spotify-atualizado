@@ -30,6 +30,11 @@ export default function Artists() {
                   <Image src={playlist.urlImg} alt="test" width={180} height={180} className={styles.cover_image} priority={true} property="true" />
                   <h1 className={styles.title}>{playlist.name}</h1>
                   <p>Artist</p>
+                  <button className={styles.btn_play}>
+                    <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24" >
+                      <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                    </svg>
+                  </button>
                 </div>
               </a>
 

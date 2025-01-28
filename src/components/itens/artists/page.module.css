@@ -19,7 +19,7 @@
 
 .cards {
     display: flex;
-    width: 204px;
+    width: 180px;
     height: auto;
     padding: 10px;
     flex-direction: column;
@@ -28,12 +28,16 @@
     font-weight: 600;
     color: white;
     border-radius: .4rem;
+    position: relative;
 }
 
 .cards:hover {
     background: 
         linear-gradient(to top, rgba(255, 255, 255, 0.048), #131313, transparent);
     /* background: #0c0c0c; */
+}
+.cards:hover .btn_play {
+    display: flex;
 }
 
 .cards > p{
@@ -47,8 +51,26 @@
     object-fit: cover;
     border-radius: 50rem;
     margin-bottom: 10px;
+    box-shadow: 0px 0px 14px #000000;
 }
 
+.btn_play {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5rem;
+    background: #1ed760;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 4.5rem;
+}
+
+.btn_play > svg {
+    width: 24px;
+    height: 24px;
+}
 
 
 @media screen and (max-width: 1115px) {
