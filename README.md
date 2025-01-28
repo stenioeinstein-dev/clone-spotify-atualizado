@@ -1,6 +1,8 @@
 # Clone - Spotify
 Imersao FrontEnd Alura
 
+Developed by [Stenio](https://github.com/stenioeinstein-dev)
+
 ### Feito em Nextjs
 
 #### Este é um projeto desenvolvido em [Next.js](https://nextjs.org/).
