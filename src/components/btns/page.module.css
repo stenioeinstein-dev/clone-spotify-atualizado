@@ -8,6 +8,17 @@
     fill: #878787;
 }
 
+.openapp {
+    width: 94px;
+    height: 32px;
+    padding: 4px 16px;
+    background: #fff;
+    color: #000;
+    border-radius: 50rem;
+    font-weight: 600;
+    font-size: 13px;
+}
+
 .installapp,
 .subscribe {
     background: transparent;

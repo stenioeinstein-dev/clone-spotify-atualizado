@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-
 
 function Btnsignin() {
     return (
@@ -26,4 +24,14 @@ function Btninstallapp() {
     )
 }
 
-export { Btnsignin, Btnsignup, Btninstallapp }
+function Btnopenapp() {
+    return (
+        <button className={styles.openapp}>
+            <span>Open App</span>
+        </button>
+    )
+}
+
+
+
+export { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp }
