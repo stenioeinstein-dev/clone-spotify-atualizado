@@ -9,8 +9,6 @@ import FloatingInput from "../inp/Floatinginput";
 
 export default function Header() {
 
-
-
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -27,6 +25,13 @@ export default function Header() {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
+    const [isSelected, setIsSelected] = useState(false);
+
+    // Função para alternar o estado
+    const toggleButton = () => {
+        setIsSelected(!isSelected);
+    };
 
     // Função para fechar o input
     const openInput = () => {
@@ -62,10 +67,18 @@ export default function Header() {
                 ) : (
                     <>
                         <div className={styles.content_c}>
-                            <div className={styles.icon_home} title="Home">
-                                <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
-                                    <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
-                                </svg>
+                            <div className={styles.icon_home} onClick={toggleButton} title="Home">
+                                {isSelected ? (
+                                    // SVG quando o botão está selecionado
+                                    <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                        <path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"></path>
+                                    </svg>
+                                ) : (
+                                    // SVG quando o botão não está selecionado
+                                    <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                        <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+                                    </svg>
+                                )}
                             </div>
                             <form>
                                 <div className={styles.icon_search} title="Search">
@@ -77,11 +90,19 @@ export default function Header() {
                                 <div className={styles.bar} onClick={openInput} title="Click /">
                                     /
                                 </div>
-                                <div className={styles.icon_browser} title="Browser">
+                                <div className={styles.icon_browser} onClick={toggleButton} title="Browser">
+                                {isSelected ? (
+                                    // SVG quando o botão está selecionado
+                                    <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                        <path d="M4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4H4V2zM1.513 9.37A1 1 0 0 1 2.291 9H21.71a1 1 0 0 1 .978 1.208l-2.17 10.208A2 2 0 0 1 18.562 22H5.438a2 2 0 0 1-1.956-1.584l-2.17-10.208a1 1 0 0 1 .201-.837zM12 17.834c1.933 0 3.5-1.044 3.5-2.333 0-1.289-1.567-2.333-3.5-2.333S8.5 14.21 8.5 15.5c0 1.289 1.567 2.333 3.5 2.333z"></path>
+                                    </svg>
+                                ) : (
+                                    // SVG quando o botão não está selecionado
                                     <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
                                         <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" ></path>
                                         <path d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9H3.525zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4V2z"></path>
                                     </svg>
+                                )}
                                 </div>
                             </form>
                         </div>
