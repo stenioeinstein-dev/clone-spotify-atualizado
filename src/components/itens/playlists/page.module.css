@@ -163,4 +163,27 @@
         gap: 16px;
         margin-bottom: 16px;
     }
+
+    .cards {
+        width: 140px;
+        height: 140px;
+    }
+
+    .title {
+        font-size: 12px;
+        width: 100%;
+        background: #0a0a0a00;
+        color: #d7d6d6;
+        padding-bottom: 8px;
+        text-align: center;
+        transition: transform 0.5s;
+    }
+
+    .cards:hover .title {
+        z-index: 999;
+        transform: translate3d(0%, -22px, 80px);
+        color: #fff;
+        background: transparent;
+    }
+    
 }
