@@ -1,7 +1,7 @@
 "use client"
+import styles from "./page.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import styles from "./page.module.css"
 import Image from "next/image";
 import logo from "../../../public/favicon.png"
 import { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp } from "@/components/btns/Btns";

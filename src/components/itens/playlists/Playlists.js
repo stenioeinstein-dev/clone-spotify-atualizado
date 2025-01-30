@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const A_SECRET_API = process.env.SECRET_API;

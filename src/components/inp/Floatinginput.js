@@ -1,6 +1,6 @@
 "use client"
 import { useEffect } from "react";
-import styles from "./page.module.css"; // Substitua pelo caminho correto do arquivo CSS.
+import styles from "./page.module.css";
 
 export default function FloatingInput() {
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function FloatingInput() {
     return (
         <div className={styles.container} id="input" style={{ display: "none" }}>
             <div className={styles.content_top}>
-                <span onClick={closeInput} className="cursor-default absolute top-4 left-4 text-white">
+                <span onClick={closeInput} className="cursor-default absolute top-5 left-4 text-white">
                     Esc to close
                 </span>
                 <button
