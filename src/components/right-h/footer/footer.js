@@ -58,6 +58,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.content_nm}>
                     <span>© 2025 Clone Spotify - Imersão Frontend</span>
+<span>Developed by Stênio</span>
                 </div>
             </div>
         </>
