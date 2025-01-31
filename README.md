@@ -15,9 +15,10 @@ Projeto desenvolvido durante a Imersão Frontend Alura
 
 ##### Imagem em formato desktop.
 
-![Image desktop](img-desktop.png)
+<img src="public/nova1.png" alt="Image desktop" style="width:400px;height:auto;"> <img src="public/nova2.png" alt="Image desktop" style="width:400px;height:auto;">
+<img src="public/nova3.png" alt="Image desktop" style="width:400px;height:auto;">
 
 ##### Imagem em formato mobile.
 
-![Image mobile](img-mobile.png)
+![Image mobile](public/cell1.png)
 
