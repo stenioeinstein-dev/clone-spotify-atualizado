@@ -30,7 +30,7 @@ export default function RightH() {
                 <div className={styles.content_itens}>
                   {results.map((result) => (
                     <a href={result.urlplaylist} target="_blank" key={result.id}>
-                      <div className={styles.cards} >
+                            <div className={`${styles.cards}`} >
                         <Image src={result.urlImg} alt="test" width={180} height={180} className={styles.cover_image} priority={true} property="true" />
                         <h1 className={styles.title}>{result.name}</h1>
                         <p>{result.s}</p>

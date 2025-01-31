@@ -10,6 +10,7 @@ export function SearchProvider({ children }) {
   const [loading, setLoading] = useState(false); // Para indicar carregamento
   const [error, setError] = useState(null); // Para lidar com erros
   const URL_API_AR = '/api/artists'; // Url da Api Artists
+  const URL_API_PL = '/api/playlist'; // Url da Api Artists
 
   const handleSearch = async (searchQuery) => {
     setQuery(searchQuery);
@@ -17,15 +18,25 @@ export function SearchProvider({ children }) {
     setError(null);
 
     try {
-      const response = await fetch(URL_API_AR);
-      if (!response.ok) {
+      // Fazendo chamadas simultâneas às APIs
+      const [response1, response2] = await Promise.all([
+        fetch(URL_API_AR),
+        fetch(URL_API_PL),
+      ]);
+
+      if (!response1.ok || !response2.ok) {
         throw new Error("Failed to fetch data");
       }
 
-      const items = await response.json();
+      // Parsing das respostas JSON
+      const items1 = await response1.json();
+      const items2 = await response2.json();
 
-      // Filtra os resultados com base na pesquisa
-      const filteredResults = items.filter((item) =>
+      // Combinando os itens das duas APIs
+      const allItems = [...items1, ...items2];
+
+      // Filtrando os resultados com base na pesquisa
+      const filteredResults = allItems.filter((item) =>
         item.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
 
