@@ -11,6 +11,79 @@
     margin-top: 20px;
 }
 
+.h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-left: 16px;
+}
+
+.content_itens {
+    padding: 10px;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+
+}
+
+.cards {
+    display: flex;
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: .4rem;
+    position: relative;
+}
+
+.cards:hover {
+    background: 
+        linear-gradient(to top, rgba(255, 255, 255, 0.048), #131313, transparent);
+    /* background: #0c0c0c; */
+}
+.cards:hover .btn_play {
+    display: flex;
+}
+
+.cards > p{
+    font-size: 12px;
+    color: rgb(168, 168, 168);
+}
+
+.cover_image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50rem;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 14px #000000;
+}
+
+.btn_play {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5rem;
+    background: #1ed760;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 4.5rem;
+}
+
+.btn_play > svg {
+    width: 24px;
+    height: 24px;
+}
 
 @media screen and (max-width: 1115px) {
     .content_itens {
@@ -24,9 +97,45 @@
     }
 }
 
+@media screen and (max-width: 1085px) {
+    .content_itens {
+        padding: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+}
 
 @media screen and (max-width: 840px) {
     .container {
         height: 108%;
+    }
+    .content_itens {
+        padding: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .content_itens {
+        padding: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .cards {
+        width: 140px;
     }
 }

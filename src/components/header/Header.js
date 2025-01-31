@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "../../../public/favicon.png"
 import { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp } from "@/components/btns/Btns";
 import FloatingInput from "../inp/Floatinginput";
+import { useSearch } from "@/context/SearchContext";
 
 export default function Header() {
 
@@ -39,12 +40,20 @@ export default function Header() {
         inputElement.style.display = "flex";
     };
 
+    const [input, setInput] = useState("");
+    const { handleSearch } = useSearch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSearch(input);
+    };
+
     return (
         <>
             <FloatingInput />
             <div className={`${styles.container}`} >
                 <div className={styles.content_l}>
-                    <Link href="/" >
+                    <Link href="" target="" >
                         <Image src={logo} width={32} height={32} alt="Logo" />
                     </Link>
                 </div>
@@ -80,13 +89,14 @@ export default function Header() {
                                     </svg>
                                 )}
                             </div>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className={styles.icon_search} title="Search">
                                     <svg data-encore-id="icon" role="img" aria-hidden="true" className="Svg-sc-ytk21e-0 dYnaPI mOLTJ2mxkzHJj6Y9_na_" viewBox="0 0 18 18">
                                         <path d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"></path>
                                     </svg>
                                 </div>
-                                <input type="text" placeholder="What do you want to listen to?" id="search" />
+                                <input type="search" value={input}
+                                    onChange={(e) => setInput(e.target.value)} placeholder="What do you want to listen to?" id="search" />
                                 <div className={styles.bar} onClick={openInput} title="Click /">
                                     /
                                 </div>

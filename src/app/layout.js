@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import CookiePopup from "@/components/popup/cookies/Cookies";
 import Footer from "@/components/footer/Footer";
+import { SearchProvider } from "@/context/SearchContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +26,12 @@ export default function RootLayout({ children }) {
       <body translate="no"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <CookiePopup />
-        <Footer />
+        <SearchProvider>
+          <Header />
+          {children}
+          <CookiePopup />
+          <Footer />
+        </SearchProvider>
       </body>
     </html>
   );

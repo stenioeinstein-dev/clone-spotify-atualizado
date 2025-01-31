@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const A_SECRET_API = process.env.SECRET_API;
-const URL_API = '/api/playlist'
+const URL_API = '/api/playlist';
 
 export default function Playlists() {
   const [userInfo, setUserInfo] = useState([]);
@@ -39,6 +39,7 @@ export default function Playlists() {
           })
         }
       </div>
+      <iframe className="ml-2 mr-2" src="https://open.spotify.com/embed/track/5oI9blwsXC8AkTWw6wASY8?utm_source=generator&theme=0" width="98.5%" height="152" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </>
   );
 }
