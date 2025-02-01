@@ -30,21 +30,22 @@ export default function PopupInfo() {
                     <h1 className="text-black text-lg" style={{ fontWeight: "600", fontFamily: "inherit" }}>
                         Clone - Spotify
                     </h1>
-                    <Link href="https://www.alura.com.br/imersao-front-end" className="text-black" style={{ fontSize: "13px", fontWeight: "600", marginBottom: "10px", fontFamily: "inherit" }}>
+                    <Link href="https://www.alura.com.br/imersao-front-end" className="text-black underline" style={{ fontSize: "13px", fontWeight: "600", marginBottom: "10px", fontFamily: "inherit" }}>
                         Imersão Front-End Alura
                     </Link>
                     <p className="text-black" style={{ fontSize: "13px", fontWeight: "500", marginBottom: "10px", fontFamily: "inherit" }}>
-                        Project
-                        <Link style={{ fontSize: "13px", fontWeight: "600", marginBottom: "10px", fontFamily: "inherit" }} href="https://github.com/stenioeinstein-dev"> Developed by Stenio.</Link>
+                        Project <Link className="underline" style={{ fontSize: "13px", fontWeight: "600", marginBottom: "10px", fontFamily: "inherit" }} href="https://github.com/stenioeinstein-dev">
+                            Developed by Stenio.
+                        </Link>
                     </p>
                     <p className="text-black" style={{ fontSize: "14px", fontWeight: "500", fontFamily: "inherit" }}>
-                    A ideia por trás deste projeto é desenvolver e aprofundar conceitos de frontend.
+                        A ideia por trás deste projeto é desenvolver e aprofundar conceitos de frontend.
                     </p>
                     <p className="text-black" style={{ fontSize: "14px", fontWeight: "500", marginTop: "4px", fontFamily: "inherit" }}>
-                    O projeto tem uma finalidade educacional, visando promover as habilidades adquiridas em programação e desenvolvimento durante a imersão.
+                        O projeto tem uma finalidade educacional, visando promover as habilidades adquiridas em programação e desenvolvimento durante a imersão.
                     </p>
                     <p className="text-black" style={{ fontSize: "14px", fontWeight: "500", marginTop: "4px", fontFamily: "inherit" }}>
-                    Foi utilizado como base de estudo o Spotify, um serviço de streaming de música, em sua versão web.
+                        Foi utilizado como base de estudo o Spotify, um serviço de streaming de música, em sua versão web.
                     </p>
 
                     <button onClick={close} className="absolute top-2 right-2 text-gray-600 hover:text-gray-900">
