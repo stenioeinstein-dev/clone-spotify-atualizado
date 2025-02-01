@@ -73,8 +73,7 @@ export default function LeftH() {
                 </button>
               </div>
             </div>
-
-
+            
           </div>
         </div>
       </nav>

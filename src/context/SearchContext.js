@@ -10,7 +10,7 @@ export function SearchProvider({ children }) {
   const [loading, setLoading] = useState(false); // Para indicar carregamento
   const [error, setError] = useState(null); // Para lidar com erros
   const URL_API_AR = '/api/artists'; // Url da Api Artists
-  const URL_API_PL = '/api/playlist'; // Url da Api Artists
+  const URL_API_PL = '/api/playlist'; // Url da Api Playlists
 
   const handleSearch = async (searchQuery) => {
     setQuery(searchQuery);

@@ -3,16 +3,14 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const A_SECRET_API = process.env.SECRET_API;
 const URL_API = '/api/playlist';
 
 export default function Playlists() {
   const [userInfo, setUserInfo] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const query = await fetch(A_SECRET_API || URL_API);
+      const query = await fetch(URL_API);
       const response = await query.json();
-      // console.log(response);
       setUserInfo(response);
     }
     getData();

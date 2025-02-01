@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function CookiePopup() {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Verifica no localStorage se o usuário já aceitou ou recusou os cookies
+    // Verifica se o usuário já aceitou ou recusou os cookies
     useEffect(() => {
         const cookieConsent = setIsVisible(true)
         if (!cookieConsent) {

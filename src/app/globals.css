@@ -31,3 +31,10 @@ body {
   width: 12px;
   background: #282828;
 }
+
+@media screen and (min-width: 1815px) {
+  /* body {
+    display: none;
+    background: #000000;
+  } */
+}
