@@ -1,4 +1,58 @@
+import Image from "next/image";
 import styles from "./page.module.css";
+import React, { useState, useEffect } from "react";
+
+function Btns() {
+    const [user, setUser] = useState(null);
+
+    // Função de login fictícia
+    const handleLogin = () => {
+
+        // Simula um login, configurando o estado do usuário
+        setUser({
+            name: "John Doe",
+            avatar: "/55.jpeg", // URL de exemplo para o avatar
+        });
+    };
+
+    // Função de logout fictícia
+    const handleLogout = () => {
+        setUser(null);
+    };
+
+    return (
+        <>
+            {user ? (
+                <>
+                    <Btnexplorepremium />
+                    <Btninstallapp />
+                    <Image
+                        src={user.avatar}
+                        alt={user.name}
+                        title={user.name}
+                        className={styles.avatar}
+                        onClick={handleLogout}
+                        width={42}
+                        height={42}
+                    />
+                </>
+            ) : (
+                <>
+                    <Btninstallapp />
+                    <Btnsignup />
+                    <button onClick={handleLogin} className={styles.login}>Log in</button>
+                </>
+            )}
+
+        </>
+    )
+}
+
+function Btnexplorepremium() {
+    return (
+        <button className={styles.explorepremium}>Explore Premium</button>
+    )
+}
 
 function Btnsignin() {
     return (
@@ -34,4 +88,4 @@ function Btnopenapp() {
 
 
 
-export { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp }
+export { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp, Btns }
