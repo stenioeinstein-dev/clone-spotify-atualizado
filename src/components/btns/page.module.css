@@ -59,6 +59,27 @@
     height: 50px; */
 }
 
+.explorepremium{
+    outline: none;
+    border: none;
+    color: #000;
+    background: #fff !important;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50rem;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 600;
+    width: auto;
+    height: 48px;
+    cursor: pointer;
+}
+
+.avatar {
+    border-radius: 50rem;
+    box-shadow: 0px 0px 2px 6px #ffffff4d;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 890px) {
     .subscribe {
         font-size: 13px;
@@ -67,6 +88,17 @@
         width: 75px;
         height: 34px;
         font-size: 13px;
+    }
+    .explorepremium{
+        font-size: 13px;
+        padding: 8px 16px;
+        font-weight: 600;
+        width: auto;
+        height: 34px;
+    }
+    .installapp {
+        font-size: 13px;
+        font-weight: 600;
     }
 }
 

@@ -1,15 +1,17 @@
 "use client"
 import styles from "./page.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../../public/favicon.png"
-import { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp } from "@/components/btns/Btns";
+import { Btnsignin, Btnsignup, Btninstallapp, Btnopenapp, Btns } from "@/components/btns/Btns";
 import FloatingInput from "../inp/Floatinginput";
 import { useSearch } from "@/context/SearchContext";
 
+
 export default function Header() {
 
+    //Menu mobile
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -117,9 +119,7 @@ export default function Header() {
                             </form>
                         </div>
                         <div className={styles.content_r}>
-                            <Btninstallapp />
-                            <Btnsignup />
-                            <Btnsignin />
+                            <Btns />
                         </div>
                     </>
                 )}
