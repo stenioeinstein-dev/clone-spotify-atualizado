@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: calc(100% - 38px);
-    background-color: #121212;
+    background-color: var(--bg-right);
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius: .4rem;

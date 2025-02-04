@@ -6,6 +6,10 @@
   /* --background: #ffffff; */
   --background: #000000;
   --foreground: #171717;
+  --bg-inp: #242424;
+  --bg-ic-h: #1F1F1F;
+  --bg-left: #121212;
+  --bg-right: #121212;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -4,7 +4,7 @@
     min-width: 280px;
     /* height: 100%; */
     height: calc(100% - 38px);
-    background-color: #121212;
+    background-color: var(--bg-left);
     border-radius: .4rem;
 }
 
