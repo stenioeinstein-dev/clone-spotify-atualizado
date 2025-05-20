@@ -23,7 +23,7 @@ export default function CookiePopup() {
             <div className="fixed border left-0 right-0 bottom-0 bg-white text-white p-4 shadow-lg flex md:flex-row justify-between items-center z-40" style={{gap: "16px"}}>
                 <div className="mb-4 md:mb-0 md:mr-4" style={{maxWidth: "40px", maxWidth: "710px"}}>
                     <p className="text-black" style={{fontSize: "13px", fontWeight: "600", fontFamily: "inherit"}}>
-                        Nós e nossos <Link href="/" style={{fontWeight: "800"}} className="underline hover:text-black">nossos parceiros</a> usamos cookies para personalizar sua experiência, para exibir anúncios com base em seus interesses e para fins de medição e análise. Ao usar nosso site e nossos serviços, você concorda com nosso uso de cookies conforme descrito em nossa <a href="/" style={{fontWeight: "800"}} className="underline hover:text-black"> Política de Cookies</Link>.
+                        Nós e nossos <Link href="/" style={{fontWeight: "800"}} className="underline hover:text-black">nossos parceiros</Link> usamos cookies para personalizar sua experiência, para exibir anúncios com base em seus interesses e para fins de medição e análise. Ao usar nosso site e nossos serviços, você concorda com nosso uso de cookies conforme descrito em nossa <Link href="/" style={{fontWeight: "800"}} className="underline hover:text-black"> Política de Cookies</Link>.
                     </p>
                 </div>
                 <div className="flex space-x-4">
