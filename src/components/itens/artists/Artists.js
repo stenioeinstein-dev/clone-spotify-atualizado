@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
-import Link from 'next/link'
 
 const URL_API = '/api/artists'
 
@@ -24,7 +23,7 @@ export default function Artists() {
         {
           userInfo && userInfo.length && userInfo.map((playlist, index) => {
             return (
-              <Link href={playlist.urlplaylist} target="_blank" key={index}>
+              <a href={playlist.urlplaylist} target="_blank" key={index}>
                 <div className={styles.cards} >
                   <Image src={playlist.urlImg} alt="test" width={180} height={180} className={styles.cover_image} priority={true} property="true" />
                   <h1 className={styles.title}>{playlist.name}</h1>
@@ -35,7 +34,7 @@ export default function Artists() {
                     </svg>
                   </button>
                 </div>
-              </Link>
+              </a>
 
             )
           })
