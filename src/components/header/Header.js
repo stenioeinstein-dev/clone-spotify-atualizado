@@ -55,7 +55,7 @@ export default function Header() {
             <FloatingInput />
             <div className={`${styles.container}`} >
                 <div className={styles.content_l}>
-                    <Link href="" target="" >
+                    <Link href="/">
                         <Image src={logo} width={32} height={32} alt="Logo" />
                     </Link>
                 </div>
